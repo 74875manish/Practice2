@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Document</title>
+    <style>
+        
+        .parent{
+            background: -webkit-linear-gradient(to right, #96c93d, #00b09b);  
+            background: linear-gradient(to right, #3783cf, #c7e371); 
+          
+          }
+        .dec{
+            background: -webkit-linear-gradient(to right, #EF629F, #EECDA3);  
+            background: linear-gradient(to right, #EF629F, #EECDA3); 
+            width: 190px;
+            height: 200px;
+            margin: auto;
+            text-align: center;
+            margin-top: 160px;
+            padding: 70px;
+            border-radius: 140px;
+        }
+
+      .dec button{
+        background-color: aquamarine;
+        border-radius: 20px;
+      }
+        
+    </style>
+</head>
+<body class="parent">
+
+    <form class="dec">
+        
+        <label>Enter First Number</label> <br>
+        <input type="text" name="num1" id="num1"> <br><br>
+        <label>Enter Second Number</label> <br>
+        <input type="text" name="num2" id="num2"> <br><br>
+        <button type="button" onclick="add()">add</button>
+        <button type="button" onclick="sub()">sub</button>
+        <button type="button" onclick="mul()">mul</button>
+        <button type="button" onclick="div()">div</button> <br> <br>
+        <h2>Result: <label id="re1"></label> </h2>
+        
+    </form>
+
+
+    <script>
+      function add(){
+        var num1 = document.getElementById("num1").value;
+        var num2 = document.getElementById("num2").value;
+        document.getElementById("re1").innerHTML=parseInt(num1)+parseInt(num2);
+        //console.log(parseInt(num1)+parseInt(num2));
+      }
+      function sub(){
+        var num1 = document.getElementById("num1").value;
+        var num2 = document.getElementById("num2").value;
+        document.getElementById("re1").innerHTML=(parseInt(num1)-parseInt(num2));  
+      }
+      function mul(){
+        var num1 = document.getElementById("num1").value;
+        var num2 = document.getElementById("num2").value;
+        document.getElementById("re1").innerHTML=parseInt(num1)*parseInt(num2);  
+      }
+      function div(){
+        var num1 = document.getElementById("num1").value;
+        var num2 = document.getElementById("num2").value;
+        document.getElementById("re1").innerHTML=(parseInt(num1)/parseInt(num2));  
+      }
+
+    </script>
+</body>
+</html>
